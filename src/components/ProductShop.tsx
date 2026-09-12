@@ -70,17 +70,20 @@ export const ProductShop: React.FC<ProductShopProps> = ({
         
         {/* Section Header with Generous Typography Spacing */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8 text-right gap-4">
-          <div className="space-y-2.5 sm:space-y-3">
+          <div className="space-y-4 sm:space-y-5">
             <div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-pharmacy-orange text-white shadow-xs">
                 <Sparkles className="w-3.5 h-3.5 text-amber-200 flex-shrink-0" />
                 <span>عروض العودة للمدارس المعتمدة</span>
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-pharmacy-charcoal tracking-tight leading-[1.35] sm:leading-[1.4]">
+            <h2
+              style={{ lineHeight: 1.45 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-black text-pharmacy-charcoal tracking-tight leading-[1.4] sm:leading-[1.45] lg:leading-[1.45] pb-2 sm:pb-3"
+            >
               اختاري اللي ناقصك 👇
             </h2>
-            <p className="text-sm sm:text-base text-pharmacy-muted font-medium leading-[1.7]">
+            <p className="text-sm sm:text-base text-pharmacy-muted font-medium leading-[1.75] sm:leading-[1.8]">
               تصفحي جميع المنتجات (26 منتج) بأسعار العرض المخفضة، وضيفي طلبك للشنطة
             </p>
           </div>
