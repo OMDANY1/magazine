@@ -23,12 +23,18 @@ export const CampaignBanner: React.FC = () => {
             </div>
 
             {/* Huge Editorial Headlines */}
-            <div className="space-y-3 sm:space-y-4 pt-1 sm:pt-2">
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.3] sm:leading-[1.34] tracking-tight">
+            <div className="space-y-5 sm:space-y-6 mb-3 sm:mb-4">
+              <h2
+                style={{ lineHeight: 1.45 }}
+                className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.45] sm:leading-[1.45] lg:leading-[1.45] tracking-tight"
+              >
                 اشتري 3… <br className="sm:hidden" />
                 <span className="text-amber-200">ووفر 10% ✨</span>
               </h2>
-              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white/95 leading-[1.32] sm:leading-[1.36]">
+              <h3
+                style={{ lineHeight: 1.45 }}
+                className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white/95 leading-[1.45] sm:leading-[1.45] lg:leading-[1.45]"
+              >
                 واشتري أكتر… <br className="sm:hidden" />
                 <span className="text-amber-100">تكسب خصم وهدية 🎁</span>
               </h3>
