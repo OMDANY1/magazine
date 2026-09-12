@@ -37,7 +37,7 @@ export const CartDrawer: React.FC = () => {
                 🎒
               </div>
               <div className="min-w-0">
-                <h2 className="text-base sm:text-lg font-black text-pharmacy-charcoal leading-snug">
+                <h2 className="text-base sm:text-lg font-black text-pharmacy-charcoal leading-[1.35]">
                   طلبك للمدرسة
                 </h2>
                 <span className="text-xs text-pharmacy-muted font-medium leading-normal block">
@@ -74,7 +74,7 @@ export const CartDrawer: React.FC = () => {
                   🎒
                 </div>
                 <div className="space-y-1.5">
-                  <h3 className="text-base font-black text-pharmacy-charcoal leading-snug">
+                  <h3 className="text-base font-black text-pharmacy-charcoal leading-[1.35]">
                     شنطة الطلب لسه فاضية!
                   </h3>
                   <p className="text-xs sm:text-sm text-pharmacy-muted max-w-xs mx-auto leading-[1.7]">
@@ -110,7 +110,7 @@ export const CartDrawer: React.FC = () => {
                     {/* Details with multi-line wrap and clear spacing */}
                     <div className="flex-1 min-w-0 space-y-1.5">
                       <div className="flex items-start justify-between gap-2">
-                        <h4 className="text-xs sm:text-sm font-bold text-pharmacy-charcoal leading-snug line-clamp-2 break-words">
+                        <h4 className="text-xs sm:text-sm font-bold text-pharmacy-charcoal leading-[1.4] line-clamp-2 break-words">
                           {item.product.nameAr}
                         </h4>
                         <button
@@ -184,7 +184,7 @@ export const CartDrawer: React.FC = () => {
                     <span className="text-2xl sm:text-3xl font-black text-pharmacy-orange tracking-tight leading-none">
                       {totalPrice}
                     </span>
-                    <span className="text-xs font-extrabold text-pharmacy-charcoal leading-none">
+                    <span className="text-xs font-extrabold text-pharmacy-charcoal leading-normal">
                       ج.م
                     </span>
                   </div>

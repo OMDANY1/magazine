@@ -23,19 +23,19 @@ export const CampaignBanner: React.FC = () => {
             </div>
 
             {/* Huge Editorial Headlines */}
-            <div className="space-y-1.5 sm:space-y-2">
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.2] tracking-tight">
+            <div className="space-y-3 sm:space-y-4 pt-1 sm:pt-2">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.3] sm:leading-[1.34] tracking-tight">
                 اشتري 3… <br className="sm:hidden" />
                 <span className="text-amber-200">ووفر 10% ✨</span>
               </h2>
-              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white/95 leading-[1.2] pt-1">
+              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white/95 leading-[1.32] sm:leading-[1.36]">
                 واشتري أكتر… <br className="sm:hidden" />
                 <span className="text-amber-100">تكسب خصم وهدية 🎁</span>
               </h3>
             </div>
 
             {/* Campaign Details with Comfortable Line-height */}
-            <p className="text-sm sm:text-base text-white/90 font-medium leading-[1.8] max-w-xl pt-1">
+            <p className="text-sm sm:text-base text-white/90 font-medium leading-[1.8] max-w-xl pt-2 sm:pt-3">
               اجمعي كل طلبات أطفالك من الفيتامينات، اللانش بوكس، فرش ومعجون الأسنان، ومرطبات البشرة في طلب واحد، واحصلي على الخصم الفوري والهدية مع كل طلب مجمع من صيدليتنا عبر واتساب.
             </p>
 

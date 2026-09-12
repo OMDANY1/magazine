@@ -76,14 +76,16 @@ export const BentoNav: React.FC<BentoNavProps> = ({ onSelectCategory }) => {
         
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 text-right gap-3">
-          <div className="space-y-2.5">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-pharmacy-orange-light text-pharmacy-orange shadow-xs">
-              تجهيز سريع في 4 خطوات 🎒
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-black text-pharmacy-charcoal tracking-tight leading-[1.25] sm:leading-[1.3]">
+          <div className="space-y-2.5 sm:space-y-3">
+            <div>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-pharmacy-orange-light text-pharmacy-orange shadow-xs">
+                تجهيز سريع في 4 خطوات 🎒
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-black text-pharmacy-charcoal tracking-tight leading-[1.35] sm:leading-[1.4]">
               كل اللي محتاجينه قبل أول يوم مدرسة
             </h2>
-            <p className="text-sm sm:text-base text-pharmacy-muted font-medium leading-relaxed pt-0.5">
+            <p className="text-sm sm:text-base text-pharmacy-muted font-medium leading-[1.7]">
               اختاري القسم المطلوب لفلترة المنتجات المناسبة بأسعار العرض الفورية
             </p>
           </div>
@@ -127,23 +129,23 @@ export const BentoNav: React.FC<BentoNavProps> = ({ onSelectCategory }) => {
                 </div>
 
                 {/* Card Bottom: Titles + Description + Arrow CTA */}
-                <div className="relative z-10 space-y-1.5 pt-2 border-t border-pharmacy-border/40 min-w-0">
+                <div className="relative z-10 space-y-2 pt-2.5 border-t border-pharmacy-border/40 min-w-0">
                   <div className="flex items-center justify-between gap-2 flex-wrap min-w-0">
-                    <span className="text-xs font-bold text-pharmacy-orange">
+                    <span className="text-xs font-bold text-pharmacy-orange leading-normal">
                       {card.subtitle}
                     </span>
-                    <span className="text-[11px] font-medium text-pharmacy-muted">
+                    <span className="text-[11px] font-medium text-pharmacy-muted leading-normal">
                       {card.countText}
                     </span>
                   </div>
-                  <h3 className="text-base sm:text-lg font-black text-pharmacy-charcoal leading-snug group-hover:text-pharmacy-orange transition-colors break-words">
+                  <h3 className="text-base sm:text-lg font-black text-pharmacy-charcoal leading-[1.4] group-hover:text-pharmacy-orange transition-colors break-words">
                     {card.title}
                   </h3>
-                  <p className="text-xs text-pharmacy-charcoal/70 line-clamp-2 leading-[1.65] font-medium pt-0.5">
+                  <p className="text-xs text-pharmacy-charcoal/70 line-clamp-2 leading-[1.65] font-medium">
                     {card.description}
                   </p>
 
-                  <div className="pt-2.5 flex items-center gap-1.5 text-xs font-extrabold text-pharmacy-orange group-hover:-translate-x-1 transition-transform">
+                  <div className="pt-2 flex items-center gap-1.5 text-xs font-extrabold text-pharmacy-orange group-hover:-translate-x-1 transition-transform leading-normal">
                     <span>تصفحي المنتجات</span>
                     <ArrowLeft className="w-3.5 h-3.5 flex-shrink-0" />
                   </div>

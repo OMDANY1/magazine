@@ -34,14 +34,16 @@ export const HowToOrder: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mx-auto text-center space-y-2.5 mb-10 sm:mb-12">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-black bg-pharmacy-orange-light text-pharmacy-orange shadow-xs">
-            تجربة طلب سريعة وبدون تعقيد ✨
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-pharmacy-charcoal tracking-tight leading-[1.25] sm:leading-[1.3]">
+        <div className="max-w-2xl mx-auto text-center space-y-2.5 sm:space-y-3 mb-10 sm:mb-12">
+          <div>
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-black bg-pharmacy-orange-light text-pharmacy-orange shadow-xs">
+              تجربة طلب سريعة وبدون تعقيد ✨
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black text-pharmacy-charcoal tracking-tight leading-[1.35] sm:leading-[1.4]">
             اطلبي في 3 خطوات بسيطة
           </h2>
-          <p className="text-sm sm:text-base text-pharmacy-muted font-medium leading-relaxed pt-1">
+          <p className="text-sm sm:text-base text-pharmacy-muted font-medium leading-[1.7]">
             بدون تسجيل حساب وبدون كارت بنكي.. طلبك مباشر مع الصيدلي عبر واتساب
           </p>
         </div>
@@ -66,11 +68,11 @@ export const HowToOrder: React.FC = () => {
                 </div>
 
                 {/* Content */}
-                <div className="space-y-1.5 min-w-0">
-                  <h3 className="text-lg sm:text-xl font-black text-pharmacy-charcoal group-hover:text-pharmacy-orange transition-colors leading-snug break-words">
+                <div className="min-w-0">
+                  <h3 className="text-lg sm:text-xl font-black text-pharmacy-charcoal group-hover:text-pharmacy-orange transition-colors leading-[1.4] break-words">
                     {step.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-pharmacy-muted leading-[1.75] font-medium pt-1">
+                  <p className="text-xs sm:text-sm text-pharmacy-muted leading-[1.7] font-medium mt-2 sm:mt-2.5">
                     {step.desc}
                   </p>
                 </div>

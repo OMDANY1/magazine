@@ -22,19 +22,19 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Main Punchy Headlines with Intentional Arabic Line-height */}
-            <div className="space-y-2">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-pharmacy-charcoal tracking-tight">
-                <span className="text-pharmacy-orange block pb-1.5 leading-[1.2]">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-pharmacy-charcoal tracking-tight space-y-1 sm:space-y-1.5">
+                <span className="text-pharmacy-orange block leading-[1.26] sm:leading-[1.28]">
                   رجعين بذكاء 🎒
                 </span>
-                <span className="block leading-[1.2]">
+                <span className="block leading-[1.26] sm:leading-[1.28]">
                   كل تجهيزات المدرسة…
                 </span>
-                <span className="block leading-[1.2]">
+                <span className="block leading-[1.26] sm:leading-[1.28]">
                   في مكان واحد.
                 </span>
               </h1>
-              <p className="text-base sm:text-lg text-pharmacy-charcoal/80 font-medium leading-[1.75] max-w-xl pt-2">
+              <p className="text-base sm:text-lg text-pharmacy-charcoal/80 font-medium leading-[1.75] max-w-xl pt-1 sm:pt-2">
                 من المناعة والعناية اليومية، للانش بوكس والنظافة… جهزي احتياجات البيت والمدرسة بسهولة من صيدلية أسامة عطا الله.
               </p>
             </div>
@@ -45,7 +45,7 @@ export const HeroSection: React.FC = () => {
                 🎒
               </div>
               <div className="text-right min-w-0">
-                <p className="text-sm sm:text-base font-extrabold text-pharmacy-orange leading-snug">
+                <p className="text-sm sm:text-base font-extrabold text-pharmacy-orange leading-[1.4]">
                   جهزيهم للمدرسة… وإحنا علينا الباقي.
                 </p>
                 <p className="text-xs text-pharmacy-muted font-medium leading-normal mt-1">
@@ -108,8 +108,8 @@ export const HeroSection: React.FC = () => {
                   <div className="absolute bottom-3 inset-x-3 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 shadow-soft text-right">
                     <div className="flex items-center justify-between gap-2">
                       <div className="text-right min-w-0">
-                        <p className="text-xs font-bold text-pharmacy-orange leading-tight">عرض خاص للمدارس</p>
-                        <p className="text-xs sm:text-sm font-extrabold text-pharmacy-charcoal leading-tight mt-0.5">وفر 10% عند شراء 3 منتجات</p>
+                        <p className="text-xs font-bold text-pharmacy-orange leading-normal">عرض خاص للمدارس</p>
+                        <p className="text-xs sm:text-sm font-extrabold text-pharmacy-charcoal leading-normal mt-0.5">وفر 10% عند شراء 3 منتجات</p>
                       </div>
                       <span className="px-2.5 py-1 rounded-xl bg-pharmacy-orange text-white text-xs font-black flex-shrink-0 whitespace-nowrap">
                         هدية 🎁
@@ -129,11 +129,11 @@ export const HeroSection: React.FC = () => {
                   />
                 </div>
                 <div className="text-right min-w-0">
-                  <span className="text-[10px] font-bold text-pharmacy-muted block leading-tight">مناعة الصغار</span>
-                  <span className="text-xs sm:text-sm font-extrabold text-pharmacy-charcoal block leading-snug truncate">
+                  <span className="text-[10px] font-bold text-pharmacy-muted block leading-normal">مناعة الصغار</span>
+                  <span className="text-xs sm:text-sm font-extrabold text-pharmacy-charcoal block leading-normal truncate">
                     ليمتليس كيدز
                   </span>
-                  <span className="text-xs sm:text-sm font-black text-pharmacy-orange leading-tight block mt-0.5">
+                  <span className="text-xs sm:text-sm font-black text-pharmacy-orange leading-normal block mt-0.5">
                     279 ج.م <span className="text-[10px] text-pharmacy-muted line-through font-normal">310</span>
                   </span>
                 </div>
@@ -149,11 +149,11 @@ export const HeroSection: React.FC = () => {
                   />
                 </div>
                 <div className="text-right min-w-0">
-                  <span className="text-[10px] font-bold text-emerald-600 block leading-tight">أساسيات الشنطة</span>
-                  <span className="text-xs sm:text-sm font-extrabold text-pharmacy-charcoal block leading-snug truncate">
+                  <span className="text-[10px] font-bold text-emerald-600 block leading-normal">أساسيات الشنطة</span>
+                  <span className="text-xs sm:text-sm font-extrabold text-pharmacy-charcoal block leading-normal truncate">
                     لانش بوكس بابلز
                   </span>
-                  <span className="text-xs sm:text-sm font-black text-pharmacy-orange leading-tight block mt-0.5">
+                  <span className="text-xs sm:text-sm font-black text-pharmacy-orange leading-normal block mt-0.5">
                     171 ج.م <span className="text-[10px] text-pharmacy-muted line-through font-normal">190</span>
                   </span>
                 </div>

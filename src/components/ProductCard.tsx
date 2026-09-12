@@ -58,55 +58,55 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         />
       </div>
 
-      {/* Product Details with Natural Wrapping & Line Heights */}
-      <div className="space-y-1.5 pt-1">
+      {/* Product Details with Natural Wrapping & Balanced Rhythm */}
+      <div className="pt-1">
         {/* Category Label */}
         <span className="text-[10px] sm:text-[11px] font-bold text-pharmacy-muted block leading-normal">
           {product.categoryLabel}
         </span>
 
         {/* Product Names: Arabic (Primary) wraps into 2 lines + English (Secondary) */}
-        <h3 className="text-sm sm:text-base font-black text-pharmacy-charcoal leading-snug line-clamp-2 min-h-[2.5rem] group-hover:text-pharmacy-orange transition-colors break-words">
+        <h3 className="text-sm sm:text-base font-black text-pharmacy-charcoal leading-[1.45] line-clamp-2 group-hover:text-pharmacy-orange transition-colors break-words mt-1">
           {product.nameAr}
         </h3>
-        <p className="text-[11px] sm:text-xs font-semibold text-pharmacy-muted line-clamp-1 font-mono dir-ltr text-right leading-tight mt-0.5">
+        <p className="text-[11px] sm:text-xs font-semibold text-pharmacy-muted line-clamp-1 font-mono dir-ltr text-right leading-normal mt-1">
           {product.name}
         </p>
 
         {/* Source Description with Comfortable Line-height */}
         {product.desc && (
-          <p className="text-[11px] sm:text-xs text-pharmacy-charcoal/70 line-clamp-2 leading-[1.65] min-h-[34px] pt-0.5">
+          <p className="text-[11px] sm:text-xs text-pharmacy-charcoal/70 line-clamp-2 leading-[1.65] mt-2">
             {product.desc}
           </p>
         )}
 
-        {/* Pricing Layout */}
-        <div className="pt-2 pb-1 border-t border-pharmacy-border/40 flex items-baseline justify-between gap-1 flex-wrap min-w-0">
+        {/* Pricing Layout with 10-12px spacing above price divider */}
+        <div className="mt-3 pt-2.5 pb-1 border-t border-pharmacy-border/40 flex items-baseline justify-between gap-1 flex-wrap min-w-0">
           <div className="flex items-baseline gap-1 flex-shrink-0">
             <span className="text-xl sm:text-2xl font-black text-pharmacy-orange tracking-tight leading-none">
               {product.price}
             </span>
-            <span className="text-xs font-bold text-pharmacy-charcoal leading-none">
+            <span className="text-xs font-bold text-pharmacy-charcoal leading-normal">
               ج.م
             </span>
           </div>
 
           <div className="flex items-center gap-1 text-[11px] sm:text-xs text-pharmacy-muted flex-shrink-0 whitespace-nowrap">
-            <span className="font-medium">بدلاً من</span>
-            <span className="line-through decoration-rose-500 decoration-1.5 text-pharmacy-muted font-bold">
+            <span className="font-medium leading-normal">بدلاً من</span>
+            <span className="line-through decoration-rose-500 decoration-1.5 text-pharmacy-muted font-bold leading-normal">
               {product.oldPrice}
             </span>
           </div>
         </div>
       </div>
 
-      {/* Action CTAs: Add to Cart / Stepper / WhatsApp */}
-      <div className="pt-2.5 mt-auto">
+      {/* Action CTAs: Add to Cart / Stepper / WhatsApp with 10-12px spacing */}
+      <div className="mt-3">
         {quantity === 0 ? (
           <div className="flex items-center gap-2">
             <button
               onClick={() => addToCart(product)}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2.5 sm:px-3 rounded-2xl bg-pharmacy-orange hover:bg-pharmacy-orange-hover text-white text-xs sm:text-sm font-black shadow-xs hover:shadow-glow-orange transition-all active:scale-95 leading-normal whitespace-nowrap"
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 px-2.5 sm:px-3 rounded-2xl bg-pharmacy-orange hover:bg-pharmacy-orange-hover text-white text-xs sm:text-sm font-black shadow-xs hover:shadow-glow-orange transition-all active:scale-95 leading-normal whitespace-nowrap"
             >
               <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
               <span>ضيفيه للطلب</span>

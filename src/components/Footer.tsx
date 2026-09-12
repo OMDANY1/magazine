@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <div className="min-w-0">
-                <h3 className="text-xl sm:text-2xl font-black text-white leading-snug">
+                <h3 className="text-xl sm:text-2xl font-black text-white leading-[1.35]">
                   صيدلية أسامة عطا الله
                 </h3>
                 <p className="text-xs text-pharmacy-orange font-bold leading-normal mt-0.5">
@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
               {/* Location */}
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-pharmacy-orange flex-shrink-0 mt-0.5" />
-                <span className="leading-relaxed">
+                <span className="leading-[1.7]">
                   كفر شكر - قليوبية<br />
                   <span className="text-white/60 font-medium">أمام مسجد آل عطا الله</span>
                 </span>

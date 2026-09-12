@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
           </div>
           <div className="flex flex-col text-right min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="font-extrabold text-sm sm:text-base lg:text-lg text-pharmacy-charcoal leading-snug truncate">
+              <span className="font-extrabold text-sm sm:text-base lg:text-lg text-pharmacy-charcoal leading-normal truncate">
                 صيدلية أسامة عطا الله
               </span>
               <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-pharmacy-orange-light text-pharmacy-orange border border-pharmacy-orange/20 whitespace-nowrap flex-shrink-0">
