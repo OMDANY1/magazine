@@ -17,45 +17,45 @@ export const CampaignBanner: React.FC = () => {
           <div className="relative z-10 max-w-3xl space-y-4 sm:space-y-6">
             
             {/* Tag Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white font-extrabold text-xs sm:text-sm">
-              <Gift className="w-4 h-4 text-amber-200" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white font-extrabold text-xs sm:text-sm max-w-full">
+              <Gift className="w-4 h-4 text-amber-200 flex-shrink-0" />
               <span>مفاجأة عروض المدارس من صيدلية أسامة عطا الله</span>
             </div>
 
             {/* Huge Editorial Headlines */}
-            <div className="space-y-1 sm:space-y-2">
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+            <div className="space-y-1.5 sm:space-y-2">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.2] tracking-tight">
                 اشتري 3… <br className="sm:hidden" />
                 <span className="text-amber-200">ووفر 10% ✨</span>
               </h2>
-              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white/95 leading-tight">
+              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white/95 leading-[1.2] pt-1">
                 واشتري أكتر… <br className="sm:hidden" />
                 <span className="text-amber-100">تكسب خصم وهدية 🎁</span>
               </h3>
             </div>
 
-            {/* Campaign Details */}
-            <p className="text-sm sm:text-base text-white/90 font-medium leading-relaxed max-w-xl">
+            {/* Campaign Details with Comfortable Line-height */}
+            <p className="text-sm sm:text-base text-white/90 font-medium leading-[1.8] max-w-xl pt-1">
               اجمعي كل طلبات أطفالك من الفيتامينات، اللانش بوكس، فرش ومعجون الأسنان، ومرطبات البشرة في طلب واحد، واحصلي على الخصم الفوري والهدية مع كل طلب مجمع من صيدليتنا عبر واتساب.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-3">
               <a
                 href="#shop"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white hover:bg-pharmacy-orange-light text-pharmacy-orange font-black text-sm sm:text-base shadow-soft transition-all active:scale-95 group"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:py-4 rounded-2xl bg-white hover:bg-pharmacy-orange-light text-pharmacy-orange font-black text-sm sm:text-base shadow-soft transition-all active:scale-95 group leading-normal"
               >
                 <span>ابدئي التسوق واختاري منتجاتك</span>
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform flex-shrink-0" />
               </a>
 
               <a
                 href="https://wa.me/201064646463?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B5%D9%8A%D8%AF%D9%84%D9%8A%D8%A9%20%D8%A3%D8%B3%D8%A7%D9%85%D8%A9%20%D8%B9%D8%B7%D8%A7%20%D8%A7%D9%84%D9%84%D9%87%20%F0%9F%91%8B%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D8%B4%D8%AA%D8%B1%D9%8A%203%20%D9%88%D9%88%D9%81%D8%B1%2010%25%20%D9%88%D9%87%D8%AF%D9%8A%D8%A9%20%F0%9F%8E%81"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white font-bold text-sm sm:text-base border border-white/30 transition-all active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-2xl bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white font-bold text-sm sm:text-base border border-white/30 transition-all active:scale-95 leading-normal"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4 flex-shrink-0" />
                 <span>استفسري على واتساب</span>
               </a>
             </div>

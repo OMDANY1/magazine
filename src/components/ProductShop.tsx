@@ -65,33 +65,33 @@ export const ProductShop: React.FC<ProductShopProps> = ({
   }, [activeCategory, searchQuery])
 
   return (
-    <section id="shop" className="py-12 sm:py-20 relative">
+    <section id="shop" className="scroll-mt-20 sm:scroll-mt-24 py-12 sm:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        {/* Section Header with Generous Typography Spacing */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8 text-right gap-4">
-          <div className="space-y-2">
+          <div className="space-y-2.5">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-pharmacy-orange text-white shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-amber-200" />
-              عروض العودة للمدارس المعتمدة
+              <Sparkles className="w-3.5 h-3.5 text-amber-200 flex-shrink-0" />
+              <span>عروض العودة للمدارس المعتمدة</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-pharmacy-charcoal tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-pharmacy-charcoal tracking-tight leading-[1.2] sm:leading-[1.25]">
               اختاري اللي ناقصك 👇
             </h2>
-            <p className="text-sm sm:text-base text-pharmacy-muted font-medium">
+            <p className="text-sm sm:text-base text-pharmacy-muted font-medium leading-relaxed pt-0.5">
               تصفحي جميع المنتجات (26 منتج) بأسعار العرض المخفضة، وضيفي طلبك للشنطة
             </p>
           </div>
 
           {/* Quick Search Bar */}
           <div className="relative w-full sm:w-72">
-            <Search className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-pharmacy-muted" />
+            <Search className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-pharmacy-muted pointer-events-none" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="ابحثي بالاسم أو المنتج..."
-              className="w-full pr-10 pl-9 py-2.5 rounded-2xl bg-white border border-pharmacy-border focus:border-pharmacy-orange focus:ring-2 focus:ring-pharmacy-orange/20 text-xs sm:text-sm font-medium text-pharmacy-charcoal placeholder:text-pharmacy-muted/70 transition-all outline-none text-right"
+              className="w-full pr-10 pl-9 py-2.5 sm:py-3 rounded-2xl bg-white border border-pharmacy-border focus:border-pharmacy-orange focus:ring-2 focus:ring-pharmacy-orange/20 text-xs sm:text-sm font-medium text-pharmacy-charcoal placeholder:text-pharmacy-muted/70 transition-all outline-none text-right leading-normal"
             />
             {searchQuery && (
               <button
@@ -107,8 +107,8 @@ export const ProductShop: React.FC<ProductShopProps> = ({
         {/* Sticky Filter Bar (Horizontal scroll on mobile) */}
         <div className="sticky top-[68px] sm:top-[76px] z-30 bg-[#FAF8F5]/90 backdrop-blur-md py-3 mb-6 sm:mb-8 border-b border-pharmacy-border/50">
           <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
-            <span className="hidden sm:flex items-center gap-1 text-xs font-bold text-pharmacy-muted pl-2">
-              <Filter className="w-3.5 h-3.5" />
+            <span className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-pharmacy-muted pl-2 flex-shrink-0">
+              <Filter className="w-3.5 h-3.5 flex-shrink-0" />
               <span>الأقسام:</span>
             </span>
 
@@ -118,7 +118,7 @@ export const ProductShop: React.FC<ProductShopProps> = ({
                 <button
                   key={cat.id}
                   onClick={() => onSelectCategory(cat.id)}
-                  className={`flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-xs ${
+                  className={`flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-xs leading-normal whitespace-nowrap ${
                     isActive
                       ? 'bg-pharmacy-orange text-white shadow-card'
                       : 'bg-white text-pharmacy-charcoal/80 hover:bg-pharmacy-orange-subtle hover:text-pharmacy-orange border border-pharmacy-border/80'
@@ -126,7 +126,7 @@ export const ProductShop: React.FC<ProductShopProps> = ({
                 >
                   <span>{cat.label}</span>
                   <span
-                    className={`text-[10px] sm:text-[11px] px-1.5 py-0.2 rounded-full font-black ${
+                    className={`text-[10px] sm:text-[11px] px-1.5 py-0.5 rounded-full font-black leading-none ${
                       isActive
                         ? 'bg-white/20 text-white'
                         : 'bg-pharmacy-charcoal/5 text-pharmacy-muted'
@@ -164,10 +164,10 @@ export const ProductShop: React.FC<ProductShopProps> = ({
           </div>
         ) : (
           <div className="text-center py-16 bg-white rounded-3xl border border-pharmacy-border p-8 space-y-3">
-            <p className="text-base font-bold text-pharmacy-charcoal">
+            <p className="text-base font-bold text-pharmacy-charcoal leading-snug">
               لم نجد منتجات تطابق "{searchQuery}"
             </p>
-            <p className="text-xs text-pharmacy-muted">
+            <p className="text-xs text-pharmacy-muted leading-relaxed">
               جرّبي البحث بكلمات أخرى أو تصفحي كل الأقسام
             </p>
             <button
@@ -175,7 +175,7 @@ export const ProductShop: React.FC<ProductShopProps> = ({
                 setSearchQuery('')
                 onSelectCategory('all')
               }}
-              className="px-4 py-2 rounded-xl bg-pharmacy-orange text-white text-xs font-bold shadow-sm"
+              className="px-4 py-2 rounded-xl bg-pharmacy-orange text-white text-xs font-bold shadow-sm leading-normal"
             >
               إعادة ضبط الفلتر
             </button>

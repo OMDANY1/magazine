@@ -35,39 +35,47 @@ export const MomChecklist: React.FC<MomChecklistProps> = ({ onSelectCategory }) 
   const progressPercent = Math.round((completedCount / totalCount) * 100)
 
   return (
-    <section id="checklist" className="py-12 sm:py-16 bg-pharmacy-orange-subtle/80 relative">
+    <section id="checklist" className="scroll-mt-20 sm:scroll-mt-24 py-12 sm:py-16 bg-pharmacy-orange-subtle/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Block */}
-        <div className="max-w-3xl mx-auto text-center space-y-3 mb-8 sm:mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-pharmacy-orange text-white shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-amber-200" />
-            Checklist مخصصة للأمهات والآباء
+        {/* Header Block with Clearer Vertical Hierarchy & Separation */}
+        <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
+          
+          {/* Badge */}
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black bg-pharmacy-orange text-white shadow-xs mb-3 sm:mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-amber-200 flex-shrink-0" />
+            <span>Checklist مخصصة للأمهات والآباء</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-pharmacy-charcoal tracking-tight">
+
+          {/* Section Title with comfortable Arabic line-height */}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-pharmacy-charcoal tracking-tight leading-[1.2] sm:leading-[1.25] mb-3 sm:mb-4">
             قبل ما الجرس يرن 🔔
           </h2>
-          <p className="text-sm sm:text-base text-pharmacy-muted font-medium max-w-xl mx-auto">
+
+          {/* Description with comfortable body Arabic line-height */}
+          <p className="text-sm sm:text-base text-pharmacy-muted font-medium max-w-xl mx-auto leading-[1.75] sm:leading-relaxed">
             Checklist سريعة ومفيدة لتجهيز كل احتياجات يوم المدرسة بدون ما تنسي أي تفصيلة أساسية.
           </p>
 
-          {/* Interactive Progress Bar */}
-          <div className="pt-3 max-w-md mx-auto">
-            <div className="flex items-center justify-between text-xs font-bold text-pharmacy-charcoal mb-1.5 px-1">
-              <span>نسبة جاهزية الشنطة:</span>
-              <span className="text-pharmacy-orange font-extrabold">
+          {/* Interactive Progress Bar with responsive wrap on small widths */}
+          <div className="pt-5 sm:pt-6 max-w-md mx-auto">
+            <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-1.5 text-xs font-bold text-pharmacy-charcoal mb-2.5 sm:mb-3 px-1 min-w-0">
+              <span className="flex-shrink-0">نسبة جاهزية الشنطة:</span>
+              <span className="text-pharmacy-orange font-extrabold flex-shrink-0">
                 {completedCount} من {totalCount} أساسيات ({progressPercent}%)
               </span>
             </div>
-            <div className="w-full h-3 bg-pharmacy-border/60 rounded-full overflow-hidden p-0.5">
+
+            <div className="w-full h-3 bg-pharmacy-border/60 rounded-full overflow-hidden p-0.5 shadow-inner">
               <div
                 className="h-full bg-gradient-to-r from-pharmacy-orange to-amber-500 rounded-full transition-all duration-500"
                 style={{ width: `${progressPercent}%` }}
               />
             </div>
+
             {completedCount === totalCount && (
-              <div className="mt-2 inline-flex items-center gap-1 text-xs font-extrabold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 animate-in fade-in">
-                <Award className="w-4 h-4" />
+              <div className="mt-3 sm:mt-3.5 inline-flex items-center gap-1.5 text-xs font-extrabold text-emerald-600 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 animate-in fade-in">
+                <Award className="w-4 h-4 flex-shrink-0" />
                 <span>عاش يا سوبر ماما! جهزتي كل أساسيات المدرسة بنجاح 🌟</span>
               </div>
             )}
@@ -83,17 +91,17 @@ export const MomChecklist: React.FC<MomChecklistProps> = ({ onSelectCategory }) 
               <div
                 key={item.id}
                 onClick={() => toggleCheck(item.id)}
-                className={`group relative rounded-3xl p-4 sm:p-5 bg-white border transition-all duration-300 cursor-pointer text-right flex items-start justify-between gap-3 shadow-soft hover:shadow-card active:scale-[0.99] ${
+                className={`group relative rounded-3xl p-4 sm:p-5 bg-white border transition-all duration-300 cursor-pointer text-right flex items-start justify-between gap-3 sm:gap-4 shadow-soft hover:shadow-card active:scale-[0.99] ${
                   isChecked
                     ? 'border-pharmacy-orange/40 bg-white'
                     : 'border-pharmacy-border/80 hover:border-pharmacy-orange/30'
                 }`}
               >
-                {/* Content */}
-                <div className="space-y-1 flex-1">
+                {/* Content area with min-w-0 so Arabic wraps gracefully */}
+                <div className="min-w-0 flex-1 space-y-1.5">
                   <div className="flex items-center gap-2">
                     <h3
-                      className={`text-base sm:text-lg font-black transition-colors ${
+                      className={`text-base sm:text-lg font-black leading-snug sm:leading-[1.35] break-words transition-colors ${
                         isChecked
                           ? 'text-pharmacy-charcoal'
                           : 'text-pharmacy-charcoal group-hover:text-pharmacy-orange'
@@ -102,24 +110,25 @@ export const MomChecklist: React.FC<MomChecklistProps> = ({ onSelectCategory }) 
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-xs sm:text-sm text-pharmacy-muted leading-relaxed font-medium">
+
+                  <p className="text-xs sm:text-sm text-pharmacy-muted leading-[1.65] font-medium pt-0.5">
                     {item.subtitle}
                   </p>
 
-                  {/* Filter action button */}
-                  <div className="pt-2">
+                  {/* Filter action CTA button with guaranteed icon gap and breathing room */}
+                  <div className="pt-2.5 sm:pt-3">
                     <button
                       type="button"
                       onClick={(e) => handleFilterClick(item.categoryTarget, e)}
-                      className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-extrabold text-pharmacy-orange hover:text-pharmacy-orange-hover bg-pharmacy-orange-light px-2.5 py-1 rounded-xl transition-colors"
+                      className="inline-flex max-w-full items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-extrabold text-pharmacy-orange hover:text-pharmacy-orange-hover bg-pharmacy-orange-light px-3 py-1.5 rounded-xl transition-colors whitespace-normal leading-normal"
                     >
                       <span>عرض المنتجات المناسبة</span>
-                      <ArrowLeft className="w-3 h-3" />
+                      <ArrowLeft className="w-3.5 h-3.5 flex-shrink-0" />
                     </button>
                   </div>
                 </div>
 
-                {/* Custom Styled Checkbox */}
+                {/* Custom Styled Checkbox - strictly flex-shrink-0 so it never compresses content */}
                 <div
                   className={`w-7 h-7 sm:w-8 sm:h-8 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-200 mt-0.5 ${
                     isChecked

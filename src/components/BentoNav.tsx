@@ -71,28 +71,28 @@ export const BentoNav: React.FC<BentoNavProps> = ({ onSelectCategory }) => {
   }
 
   return (
-    <section id="bento" className="py-12 sm:py-16 bg-white/70 border-y border-pharmacy-border/50 relative">
+    <section id="bento" className="scroll-mt-20 sm:scroll-mt-24 py-12 sm:py-16 bg-white/70 border-y border-pharmacy-border/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 text-right">
-          <div className="space-y-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-pharmacy-orange-light text-pharmacy-orange">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 text-right gap-3">
+          <div className="space-y-2.5">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-pharmacy-orange-light text-pharmacy-orange shadow-xs">
               تجهيز سريع في 4 خطوات 🎒
             </span>
-            <h2 className="text-2xl sm:text-4xl font-black text-pharmacy-charcoal tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-pharmacy-charcoal tracking-tight leading-[1.25] sm:leading-[1.3]">
               كل اللي محتاجينه قبل أول يوم مدرسة
             </h2>
-            <p className="text-sm sm:text-base text-pharmacy-muted font-medium">
+            <p className="text-sm sm:text-base text-pharmacy-muted font-medium leading-relaxed pt-0.5">
               اختاري القسم المطلوب لفلترة المنتجات المناسبة بأسعار العرض الفورية
             </p>
           </div>
-          <div className="hidden sm:block text-xs font-bold text-pharmacy-muted">
+          <div className="hidden sm:block text-xs font-bold text-pharmacy-muted pb-1">
             اضغطي على أي قسم لعرض منتجاته 👇
           </div>
         </div>
 
-        {/* Bento Grid: Desktop 4-card layout, Mobile horizontal scroll */}
+        {/* Bento Grid: Desktop 4-card layout, Mobile 1-col / 2-col layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {cards.map((card) => {
             const Icon = card.icon
@@ -127,8 +127,8 @@ export const BentoNav: React.FC<BentoNavProps> = ({ onSelectCategory }) => {
                 </div>
 
                 {/* Card Bottom: Titles + Description + Arrow CTA */}
-                <div className="relative z-10 space-y-1.5 pt-2 border-t border-pharmacy-border/40">
-                  <div className="flex items-center justify-between">
+                <div className="relative z-10 space-y-1.5 pt-2 border-t border-pharmacy-border/40 min-w-0">
+                  <div className="flex items-center justify-between gap-2 flex-wrap min-w-0">
                     <span className="text-xs font-bold text-pharmacy-orange">
                       {card.subtitle}
                     </span>
@@ -136,16 +136,16 @@ export const BentoNav: React.FC<BentoNavProps> = ({ onSelectCategory }) => {
                       {card.countText}
                     </span>
                   </div>
-                  <h3 className="text-lg font-black text-pharmacy-charcoal group-hover:text-pharmacy-orange transition-colors">
+                  <h3 className="text-base sm:text-lg font-black text-pharmacy-charcoal leading-snug group-hover:text-pharmacy-orange transition-colors break-words">
                     {card.title}
                   </h3>
-                  <p className="text-xs text-pharmacy-charcoal/70 line-clamp-2 leading-relaxed font-medium">
+                  <p className="text-xs text-pharmacy-charcoal/70 line-clamp-2 leading-[1.65] font-medium pt-0.5">
                     {card.description}
                   </p>
 
-                  <div className="pt-2 flex items-center gap-1 text-xs font-extrabold text-pharmacy-orange group-hover:-translate-x-1 transition-transform">
+                  <div className="pt-2.5 flex items-center gap-1.5 text-xs font-extrabold text-pharmacy-orange group-hover:-translate-x-1 transition-transform">
                     <span>تصفحي المنتجات</span>
-                    <ArrowLeft className="w-3.5 h-3.5" />
+                    <ArrowLeft className="w-3.5 h-3.5 flex-shrink-0" />
                   </div>
                 </div>
               </div>
